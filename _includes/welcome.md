@@ -1,28 +1,25 @@
-# Welcome
+<h1 id="Начало"> Начало</h1>
 
-There's a lot of outdated information on the Web that leads new PHP users astray, propagating bad practices and bad
-code. This must stop. _PHP: The Right Way_ is an easy-to-read, quick reference for PHP best practices, accepted coding
-standards, and links to authoritative tutorials around the Web.
+В интернете очень много устаревшей информации, что приводит новых пользователей PHP в заблуждение, распространению плохих практик и плохому коду. Этому необходимо положить конец.
 
-## Disclaimer
+_PHP: Правильный Путь_ это легкочитаемое, быстрое руководство по лучшим практикам PHP, поддерживающее стандарты написания кода и содержащее ссылки на авторитетные руководства в Интернете.
 
-_There is no canonical way to use PHP_. However, this website is a humble display of best practices,
-available options, and good information. It aims to introduce new PHP developers and to rethink seasoned pros with fresh
-ideas.
+<h2 id="Отказ"> Отказ </h2>
 
-This is a living document and will continue to be updated with more helpful information and examples as they become
-available.
+_В интернете не существует каноничного пути использования PHP_. Как бы то ни было, этот скромный сайт содержит лучшие практики, доступные варианты и полезную информацию. Он направлен на ознакомление новых PHP разработчиков и переосмысление опытными профессионалами свежих идей.
 
-## How to Contribute
+Это живой документ и он продолжит обновляться более полезной информацией и примерами, как только они станут доступны.
 
-Help make this website the best resource for new PHP programmers! [Contribute on GitHub][1]
+<h2 id="Как_помочь"> Как помочь </h2>
+Помогите сделать этот сайт лучшим ресурсом для новых PHP программистов! [Помочь используя GitHub][1]
 
-## Spread the Word!
+<h2 id="Расскажи!"> Расскажи! </h2>
 
-_PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP developers
-know where to find good information!
+_PHP: Правильный путь_ имеет баннер, который вы можете использовать на вашем сайте. Продемонстрируйте свою поддержку и пусть новые PHP разработчики узнают, где найти хорошую информацию!
 
-[See Banner Images][2]
+[Посмотреть баннеры][2]
 
 [1]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
 [2]: /banners.html
+
+
