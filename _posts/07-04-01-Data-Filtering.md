@@ -1,9 +1,9 @@
 ---
-title: Фильтрация данных
+title: Р¤РёР»СЊС‚СЂР°С†РёСЏ РґР°РЅРЅС‹С…
 isChild: true
 ---
 
-## Фильтрация данных
+## Р¤РёР»СЊС‚СЂР°С†РёСЏ РґР°РЅРЅС‹С…
 
 Never ever (ever) trust foreign input introduced to your PHP code. Always sanitize and validate
 foreign input before using it in code. The `filter_var` and `filter_input` functions can sanitize text and validate text formats (e.g.

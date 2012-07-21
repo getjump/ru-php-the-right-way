@@ -2,7 +2,7 @@
 isChild: true
 ---
 
-## Простанства имен
+## РџСЂРѕСЃС‚Р°РЅСЃС‚РІР° РёРјРµРЅ
 
 As mentioned above, the PHP community has a lot of developers creating lots of code. This means that one library's PHP code may use the same class name as another library. When both libraries are used in the same namespace, they collide and cause trouble.
 
