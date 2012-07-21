@@ -1,64 +1,69 @@
-# PHP: The Right Way
-
-## Overview
+# PHP: Правильный путь
+### Перевод руководства http://phptherightway.com
+## Обзор
 
 This is the GitHub Pages repository for the _PHP: The Right Way_ project.
+Это репозиторий GitHub Pages для проекта _PHP: Правильный путь_.
 
-* This website is a Jekyll project.
-* Each section and sub-section are a Markdown file in `_posts/`.
-* Sub-sections have `isChild: true` in their front matter.
-* The navigation and page structure are automatically generated.
+* Этот вебсайт работает с помощью Jekyll.
+* Каждая секция и подсекция, это Markdown файл в директории `_posts/`. 
+* Подсекции имеют тэг `isChild: true` в их шапке.
+* Навигация и структура страниц генерируются автоматически.
 
-## Spread the Word!
+## Расскажите всем!
 
-_PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP
-developers know where to find good information!
+_PHP: Правильный путь_ имеет банерные изображения, которые вы можете использовать на вашем сайте. Окажите поддержку и дайте новым PHP разработчикам узнать, где найти хорошую информацию!
 
-[See Banner Images](http://www.phptherightway.com/banners.html)
+[Посмотреть банеры](http://www.phptherightway.com/banners.html)
 
-## How to Contribute
+## Как помочь?
 
-1. Fork and edit
-2. Optionally install [Ruby](https://rvm.io/rvm/install/) with [Jekyll](https://github.com/mojombo/jekyll/) gem to preview locally
-3. Submit pull request for consideration
+1. Сделайте форк, отредактируйте.
+2. Можете установить [Ruby](https://rvm.io/rvm/install/) вместе с гемом [Jekyll](https://github.com/mojombo/jekyll/) для локального предпосмотра.
+3. Отправьте pull request для потверждения.
 
-### Contributor Style Guide
+###  Руководство по помощи
 
-1. Use American English spelling (*primary English repo only*)
-2. Use four (4) spaces to indent text; do not use tabs.
-3. Wrap all text to 120 characters.
-4. Code samples should adhere to PSR-1 or higher.
+1. Используйте американский английский(для основного репозитория), и русский для дополнительного(переведенного).
+2. Используйте четыре пробела для выделения текста; не используйте табы.
+3. Сверните весь текст в 120 символов.
+4. Примеры кода, добавляемые в руководство должны придерживаться PSR-1 или выше.
 
-## Where
+## Где
 
-<http://www.phptherightway.com>
+<http://www.phptherightway.com> - Английский
+<http://ru.phptherightway.com> - Русский
 
-### Translations
+### Переводы
 
-If you are interested in translating _PHP: The Right Way_, fork this repo on GitHub and publish your localized fork to your own GitHub Pages account. We'll link to your translation from the primary document.
+Если вы заинтересованы в переводе _PHP: Правильный Путь_, сделайте форк основного репозитория на GitHub и опубликуйте переведенный форк на вашем собственном аккаунте GitHub Pages. Мы будем ссылаться на ваш перевод из основного документа.
 
-To avoid fragmentation and reader confusion, please choose one of these options:
+Чтобы избежать фрагментации и путаницы читетале, пожалуйста выберите один из следующих вариантов:
 
-1. We link to your GitHub Pages fork with `[username].github.com/php-the-right-way`
-2. We link to your GitHub Pages fork with a subdomain (e.g. "ru.phptherightway.com")
+1. Мы будем сылаться на ваш форк GitHub Pages `[имя_пользователя].github.com/php-the-right-way`.
+2. Мы будем сылаться на ваш форк GitHub Pages с субдоменом(например "ru.phptherightway.com")
 
-If you use a subdomain, enter the subdomain into the `CNAME` file, and ask us to setup DNS for you. If you do not use a subdomain, remove the `CNAME` file entirely else your fork will not build when pushed.
+Если вы используете субдомен, введите его в файле `CNAME`, и попросите нас установить DNS. Если вы не используете субдомен, удалите файл `CNAME`, иначе ваш форк не будет собран, когда вы сделаете push.
 
-When your translation is ready, open an issue on the Issue Tracker to let us know.
+Когда ваш перевод будет готов, откройте инцидент(issue) в Issue Tracker(Трэкере Инцидентов), чтобы дать нам знать.
 
-## Why
+## Почему
 
-There's been a lot of discussion lately about how the PHP community lacks sufficient, credible information for programmers new to PHP. This repository aims to solve this problem.
+В последнее время было очень много дискусий о том, как сообществу PHP не хватает достоверной информации для новых PHP программистов. Этот репозиторий призван решить эту проблему.
 
-## Who
+## Кто
 
-My name is [Josh Lockhart](http://twitter.com/codeguy). I'm the author of the [Slim Framework](http://www.slimframework.com/), and I work for [New Media Campaigns](http://www.newmediacampaigns.com/).
+Имя разработчика [Josh Lockhart](http://twitter.com/codeguy). Он является автором [Slim Framework](http://www.slimframework.com/), и работает на [New Media Campaigns](http://www.newmediacampaigns.com/).
+Я инициатор русского перевода [Pavel Savinov](http://twitter.com/getjump).
 
-### Collaborators
+### Соавторы
 
 * [Kris Jordan](http://krisjordan.com/)
 * [Phil Sturgeon](http://philsturgeon.co.uk/)
 
-## License
+### Перевод
+* [Pavel Savinov](http://twitter.com/getjump) - инициатор русского перевода.
+
+## Лицензия
 
 [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/)
