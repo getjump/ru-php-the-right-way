@@ -1,19 +1,20 @@
 ---
+title: Пространства имен
 isChild: true
 ---
 
 ## Простанства имен
 
-As mentioned above, the PHP community has a lot of developers creating lots of code. This means that one library's PHP code may use the same class name as another library. When both libraries are used in the same namespace, they collide and cause trouble.
+Как было сказано выше, сообщество PHP состоит из множества разработчиков, создающих очень много кода. Это значит, что одна библиотека PHP, может иметь такое-же название класса, как и другая. Когда обе библиотеки используются в одном пространстве имен, они сталкиваются и вызывают проблемы.
 
-_Namespaces_ solve this problem. As described in the PHP reference manual, namespaces may be compared to operating system directories that _namespace_ files; two files with the same name may co-exist in separate directories. Likewise, two PHP classes with the same name may co-exist in separate PHP namespaces. It's as simple as that.
+_Пространства имен_ решают эту проблему. Как описано в руководстве PHP, пространства имен, можно сравнить с папками операционной системы, которые являются _пространствами имен_ файлов; два файла с одинаковым именем, могут сосуществовать в разных директориях. Подобно этому, два PHP класса с одинаковым названием могут существовать в разных пространствах имен PHP.
 
-It is important for you to namespace your code so that it may be used by other developers without fear of colliding with other libraries.
+Это важно для вас, добавлять ваш код в пространства имен, так чтобы он мог использоваться другими разработчиками, без страха столкновения с другими библиотеками.
 
-One recommended way to use namespaces is outlined in [PSR-0][psr0], which aims to provide a standard file, class and namespace convention to allow plug-and-play code.
+Один из рекомендуемых способов использования пространств имен описан в [PSR-0][psr0], который призван обеспечить стандартное соглашение файлов, классов и пространств имен, чтобы позволить PnP код.
 
-* [Read about Namespaces][namespaces]
-* [Read about PSR-0][psr0]
+* [Подробнее о пространствах имен][namespaces]
+* [Подробнее о PSR-0][psr0]
 
-[namespaces]: http://php.net/manual/en/language.namespaces.php
-[psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
+[namespaces]: http://php.net/manual/ru/language.namespaces.php
+[psr0]: https://github.com/getjump/fig-standards/blob/master/accepted/PSR-0.md
