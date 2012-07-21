@@ -1,4 +1,4 @@
-# Code Style Guide
+# Руководство написания кода
 
 The PHP community is large and diverse, composed of innumerable libraries, frameworks, and components. It is common for
 PHP developers to choose several of these and combine them into a single project. It is important that PHP code adhere
@@ -14,18 +14,18 @@ Ideally you should write PHP code that adheres to one or more of these standards
 read and work with your code. They all add on to the recommendation before, so using PSR-1 requires PSR-0, but does
 not require PSR-2.
 
-* [Read about PSR-0][psr0]
-* [Read about PSR-1][psr1]
-* [Read about PSR-2][psr2]
+* [Подробнее о PSR-0][psr0]
+* [Подробнее о PSR-1][psr1]
+* [Подробнее о PSR-2][psr2]
 
 You can use the [phpcs-psr][phpcs-psr] sniff for [PHP_CodeSniffer][phpcs] to check code against these recommendations.
 Use Fabien Potencier's [PHP Coding Standards Fixer][phpcsfixer] to automatically modify your code syntax so that it
 conforms with these standards, saving you from fixing each problem by hand.
 
 [fig]: http://www.php-fig.org/
-[psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
-[psr1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
-[psr2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
+[psr0]: https://github.com/getjump/fig-standards/blob/master/accepted/PSR-0.md
+[psr1]: https://github.com/getjump/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
+[psr2]: https://github.com/getjump/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
 [phpcs-psr]: https://github.com/klaussilveira/phpcs-psr
 [phpcsfixer]: http://cs.sensiolabs.org/
