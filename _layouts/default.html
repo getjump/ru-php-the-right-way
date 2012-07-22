@@ -31,7 +31,7 @@
         <nav class="site-navigation">
             <div class="build-date">Последнее обновление: {{ site.time }}</div>
             <ul>
-                <li><a href="/#site-header">Добро пожаловать</a></li>
+                <li><a href="/ru-php-the-right-way/#site-header">Добро пожаловать</a></li>
                 {% assign lastIsChild = false %}
                 {% for post in site.posts reversed %}
                     {% if post.isChild and lastIsChild != true %}<ul>{% endif %}
