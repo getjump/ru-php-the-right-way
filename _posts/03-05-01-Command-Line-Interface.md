@@ -1,56 +1,59 @@
 ---
+title: Интерфейс командной строки
 isChild: true
 ---
 
-## Command Line Interface
+## Интерфейс командной строки
 
-PHP was created primarily to write web applications, but it's also useful for scripting command line interface (CLI) programs, too. Command line PHP programs can help you automate common tasks like testing, deployment, and application administrativia.
+Главная цель с которой был создан PHP, писать веб приложения, но он так-же полезен для написания кода для интерфейса командной строки(CLI). PHP программы командной строки, могут помочь вам автоматизировать общие задачи, как тестирование, развертывание и администратирование приложения.
 
-CLI PHP programs are powerful because you can use your app's code directly without having to create and secure a web GUI for it. Just be sure not to put your CLI PHP scripts in your public web root!
+CLI PHP программы очень мощные, потому что вы можете использовать код вашего приложения напрямую, буз нужды в создании и обеспечении безопасности веб-интерфейса(GUI) для него. Только убедитесь, что вы используете для ваших скриптов CLI PHP публичный корень вашего веб-сервера. 
 
-Try running PHP from your command line:
+Попробуйте запустить PHP из консоли:
 
 {% highlight bash %}
 > php -i
 {% endhighlight %}
 
-The `-i` option will print your PHP configuration just like the [`phpinfo`][phpinfo] function. 
+Опция `-i` выдаст вам конфигурацию вашего PHP, подобно функции [`phpinfo`][phpifno].
 
-The `-a` option provides an interactive shell, similar to ruby's IRB or python's interactive shell. There are a number of other useful [command line options][cli-options], too.
+Опция `-a` предоставляет доступ к интерактивной оболчки, подобно ruby IRB или интерактивной оболочки python. Так-же есть целый ряд других полезных [опций командной строки][cli-options].
 
-Let's write a simple "Hello, $name" CLI program. To try it out, create a file named `hello.php`, as below.
+Давайте напишем простую "Привет, $name" программу CLI. Чтобы это сделать, создайте файл с именем `hello.php`, как показано ниже.
 
 {% highlight php %}
 <?php
 if($argc != 2) {
-    echo "Usage: php hello.php [name].\n";
+    echo "Использование: php hello.php [name].\n";
     exit(1);
 }
 $name = $argv[1];
-echo "Hello, $name\n";
+echo "Привет, $name\n";
 {% endhighlight %}
 
-PHP sets up two special variables based on the arguments your script is run with. [`$argc`][argc] is an integer variable containing the argument *count* and [`$argv`][argv] is an array variable containing each argument's *value*. The first argument is always the name of your PHP script file, in this case `hello.php`.
+PHP устанавливает две специальные переменные, которые основаны на аргументах, с которыми запущен ваш скрипт. [`$argc`][argc] - это переменная с числовым значением, которая содержит количество аргументов, [`$argv`][argv] - это массив, содержащий значение каждого аргумента. Первый аргумент - всегда название вашего PHP скрипта, в этом случае `hello.php`.
 
-The `exit()` expression is used with a non zero number to let the shell know that the command failed. Commonly used exit codes can be found [here][exit-codes]
+Выражение `exit()` используется с не-нулевым числом, чтобы дать оболочке понять, что команда не удалась.
+Часто используемые коды завершения можно найти [здесь][exit-codes]
 
 To run our script, above, from the command line:
+Чтобы запустить наш скрипт, который указан наверху, из командной строки:
 
 {% highlight bash %}
 > php hello.php
-Usage: php hello.php [name]
-> php hello.php world
-Hello, world
+Использование: php hello.php [name]
+> php hello.php Мир
+Привет, Мир
 {% endhighlight %}
 
 
- * [Learn about running PHP from the command line][php-cli]
- * [Learn about setting up Windows to run PHP from the command line][php-cli-windows]
+ * [Подробнее о запуске PHp из командной строки][php-cli]
+ * [Подробнее о настройке Windows для запуска PHP из командной строки][php-cli-windows]
 
-[phpinfo]: http://php.net/manual/en/function.phpinfo.php
-[cli-options]: http://www.php.net/manual/en/features.commandline.options.php
-[argc]: http://php.net/manual/en/reserved.variables.argc.php
-[argv]: http://php.net/manual/en/reserved.variables.argv.php
-[php-cli]: http://php.net/manual/en/features.commandline.php
-[php-cli-windows]: http://www.php.net/manual/en/install.windows.commandline.php
+[phpinfo]: http://php.net/manual/ru/function.phpinfo.php
+[cli-options]: http://www.php.net/manual/ru/features.commandline.options.php
+[argc]: http://php.net/manual/ru/reserved.variables.argc.php
+[argv]: http://php.net/manual/ru/reserved.variables.argv.php
+[php-cli]: http://php.net/manual/ru/features.commandline.php
+[php-cli-windows]: http://www.php.net/manual/ru/install.windows.commandline.php
 [exit-codes]: http://www.gsp.com/cgi-bin/man.cgi?section=3&topic=sysexits
