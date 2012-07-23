@@ -55,11 +55,7 @@ foreach($periodIterator as $date)
 {% endhighlight %}
 
 * [Подробнее о DateTime][datetime]
-* [Подробнее о DateInterval][dateinterval]
-* [Подробнее о DatePeriod][dateperiod]
 * [Подробнее о форматировании даты][dateformat] (принятый вариант формата строки даты)
 
-[datetime]: http://www.php.net/manual/class.datetime.php
-[dateinterval]: http://www.php.net/manual/class.dateinterval.php
-[dateperiod]: http://www.php.net/manual/class.dateperiod.php
+[datetime]: http://www.php.net/manual/book.datetime.php
 [dateformat]: http://www.php.net/manual/function.date.php
