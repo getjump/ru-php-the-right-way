@@ -1,8 +1,8 @@
 ---
-title: Databases
+title: Базы данных
 ---
 
-# Databases
+# Базы данных
 
 Many times your PHP code will use a database to persist information. You have a few options to connect and interact
 with your database. The recommended option _until PHP 5.1.0_ was to use native drivers such as [mysql][mysql], [mysqli][mysqli], [pgsql][pgsql], etc.
@@ -52,7 +52,7 @@ database preventing potential SQL injection attacks.
 
 * [Learn about PDO][1]
 
-## Abstraction Layers
+## Уровень абстракции
 
 Many frameworks provide their own abstraction layer which may or may not sit on top of PDO.  These will often emulate features for
 one database system that another is missing form another by wrapping your queries in PHP methods, giving you actual database abstraction.
@@ -70,6 +70,6 @@ Some abstraction layers have been built using the PSR-0 namespace standard so ca
 [3]: http://framework.zend.com/manual/en/zend.db.html
 [4]: http://packages.zendframework.com/docs/latest/manual/en/zend.db.html
 
-[mysql]: http://uk.php.net/mysql
-[mysqli]: http://uk.php.net/mysqli
-[pgsql]: http://uk.php.net/pgsql
+[mysql]: http://php.net/mysql
+[mysqli]: http://php.net/mysqli
+[pgsql]: http://php.net/pgsql

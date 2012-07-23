@@ -1,30 +1,26 @@
 ---
+title: Исключения
 isChild: true
 ---
 
-## Exceptions
+## Исключения
 
-Exceptions are a standard part of most popular programming languages, but they are often overlooked by PHP programmers. 
-Languages like Ruby are extremely Exception heavy, so whenever something goes wrong such as a HTTP request failing, or 
-a DB query goes wrong, or even if an image asset could not be found, Ruby (or the gems being used) will throw an 
-exception to the screen meaning you instantly know there is a mistake. 
+Исключения являются неотъемлимой частью большинства популярных языков программирования, но их часто обделяют вниманием разработчики PHP.
+Языки, подобные Ruby, чрезвычайно подробно обрабатывают Исключения, поэтому, когда что-то идет не так, как например HTTP запрос не удался, или запрос к базе данных происходит неправильно, или даже если изображение не может быть найдено, Ruby (или гемы, которые используется) выдадут(выбросят-throw) исключение на экран, которое сразу даст понять, где допущена ошибка.
 
-PHP itself is fairly lax with this, and a call to `file_get_contents()` will usually just get you a `FALSE` and a warning.
-Many older PHP frameworks like CodeIgniter will just return a false, log a message to their proprietary logs and maybe 
-let you use a method like `$this->upload->get_error()` to see what went wrong. The problem here is that you have to go 
-looking for a mistake and check the docs to see what the error method is for this class, instead of having it made extremely 
-obvious.
+PHP сам по себе, довольно слаб в этом, и вызов `file_get_contents()`, как правило даст вам только `FALSE` и предупреждение.
+Многие старые PHP фрэймворки, как CodeIgniter, просто вернут false, добавят сообщение в свой собственный журнал и может быть 
+дадут вам использовать метод, как `$this->upload->get_error()`, чтобы посмотреть, что пошло не так.
+Проблема в том, что вы должны искать ошибку и проверять документацию, чтобы понять, какой ошибочный метод существует в этом классе, вместо того, чтобы сделать это всё более очевидным.
 
-Another problem is when classes automatically throw an error to the screen and exit the process. When you do this you 
-stop another developer from being able to dynamically handle that error. Exceptions should be thrown to make a developer aware 
-of an error, then they can choose how to handle this. E.g:
+Еще одна проблема, когда классы автоматически выдают ошибку на экран и закрывают процесс. Когда вы делаете это, вы не даете другому разработчику динамически обработать эту ошибку. Исключения должны быть выданы(выброшены-throw), чтобыы дать разработчику знать об ошибку, чтобы они могли выбрать, как обработать это. Например:
 
 {% highlight php %}
 <?php
 $email = new Fuel\Email;
-$email->subject('My Subject');
-$email->body('How the heck are you?');
-$email->to('guy@example.com', 'Some Guy');
+$email->subject('Моя тема');
+$email->body('Как ты, чёрт возьми??');
+$email->to('guy@example.com', 'Некоторый парень');
 
 try
 {
@@ -32,37 +28,34 @@ try
 }
 catch(Fuel\Email\ValidationFailedException $e)
 {
-    // The validation failed
+    // Валидация не удалась
 }
 catch(Fuel\Email\SendingFailedException $e)
 {
-    // The driver could not send the email
+    // Драйвер не может отправить сообщение
 }
 {% endhighlight %}
 
-### SPL Exceptions
+### Исключения SPL
 
-An Exception by default has no meaning and the most common to give it meaning is by setting its name:
+Исключение по умолчанию не имеет смысла, но наиболее распространенным путем, для придания смысла, является установка его названия:
 
 {% highlight php %}
 <?php
 class ValidationException extends Exception {}
 {% endhighlight %}
 
-This means you can add multiple catch blocks and handle different Exceptions differently. This can lead to 
-the creation of a <em>lot</em> of custom Exceptions, some of which could have been avoided using the SPL Exceptions 
-provided in the [SPL extension][splext]. 
+Это означает, что вы можете добавить несколько блоков отлова и обработки разных Исключений, по-разному. Это может привести к созданию <em>множества</em> определенных Исключения, некоторые из которых некоторые из которых можно было бы избежать, используя Исключения SPL предоставляемы [расширением SPL][splext].
 
-If for example you use the `__call()` Magic Method and an invalid method is requested then instead of throwing a standard 
-Exception which is vague, or creating a custom Exception just for that, you could just `throw new BadFunctionCallException;`.
+Например, вы используете магический метод `__call()` и был запрошен неправильный метод, тогда вместо выдачи(выброса-throw) обычного Исключения, которое расплывчато, или создания пользовательского исключения для этого, вы можете просто `throw new BadFunctionCallException;`.
 
-* [Read about Exceptions][exceptions]
-* [Read about SPL Exceptions][splexe]
-* [Nesting Exceptions In PHP][nesting-exceptions-in-php]
-* [Exception Best Practices in PHP 5.3][exception-best-practices53]
+* [Подробнее об исключениях][exceptions]
+* [Подробнее о расширении SPL][splexe]
+* [Вложенные исключения PHP][nesting-exceptions-in-php]
+* [Лучшие практики исключений в PHP 5.3][exception-best-practices53]
 
-[exceptions]: http://php.net/manual/en/language.exceptions.php
-[splexe]: http://php.net/manual/en/spl.exceptions.php
+[exceptions]: http://php.net/manual/ru/language.exceptions.php
+[splexe]: http://php.net/manual/ru/spl.exceptions.php
 [splext]: /#standard_php_library
 [exception-best-practices53]: http://ralphschindler.com/2010/09/15/exception-best-practices-in-php-5-3
 [nesting-exceptions-in-php]: http://www.brandonsavage.net/exceptional-php-nesting-exceptions-in-php/

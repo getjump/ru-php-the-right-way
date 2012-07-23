@@ -1,45 +1,46 @@
 ---
+title: Composer и Packagist 
 isChild: true
 ---
 
-## Composer and Packagist
+## Composer и Packagist
 
-Composer is a **brilliant** dependency manager for PHP. List your project's dependencies in a `composer.json` file and, with a few simple commands, Composer will automatically download your project's dependencies and setup autoloading for you.
+Composer является **блестящим** менджером зависимостей для PHP. Укажите список зависимостей вашего проекта, в файле `composer.json` и с несколькими простыми командами, Composer автоматически скачает зависимости вашего проекта и установит автозагрузку для вас. 
 
-There are already a lot of PHP libraries that are compatible with Composer, ready to be used in your project. These "packages" are listed on [Packagist][1], the official repository for Composer-compatible PHP libraries.
+Уже существует много PHP библиотек, которые совместимы с Composer, готовых для использования в вашем проекте. Список этих "пакетов" есть на [Packagist][1], оффициальном репозитории для Composer-совместимых PHP библиотек. 
 
-### How to Install Composer
+### Как установить Composer
 
-You can install Composer locally (in your current working directory; though this is no longer recommended) or globally (e.g. /usr/local/bin). Let's assume you want to install Composer locally. From your project's root directory:
+Вы можете установить Composer локально(в вашей текущей рабочей директории; хотя это больше не рекомендуется) или глобально(например /usr/local/bin). Предположим вы хотите установить Composer локально. Из корневой директории вашего проекта выполните:
 
     curl -s http://getcomposer.org/installer | php
 
-This will download `composer.phar` (a PHP binary archive). You can run this with `php` to manage your project dependencies. <strong>Please Note:</strong> If you pipe downloaded code directly into an interpreter, please read the code online first to confirm it is safe.
+Это позволит загрузить файл `composer.phar` (двоичный PHP архив). Вы можете запустить его, исопльзуя `php` для управления зависимостями вашего проекта. <strong>Обратите внимание:</strong> Если вы скачаете код напрямую в ваш интерпретатор, пожалуйста, сперва прочитайте код онлайн, для потверждения его безопасности.
 
-### How to Install Composer (manually)
+### Как установить Composer (вручную)
 
-Manually installing composer is an advanced technique; however, there are various reasons why a developer might prefer this method vs. using the interactive installation routine. The interactive installation checks your PHP installation to ensure that:
+Ручная установка Composer - это продвинутая техника; однако, существуют разные причины, почему разработчик может предпочесть этот метод, использованию интерактивной установки. Интерактивная установка проверяет вашу установку PHP, чтобы подвердить, что:
 
-- a sufficient version of PHP is being used
-- `.phar` files can be executed correctly
-- certain directory permissions are sufficient
-- certain problematic extensions are not loaded
-- certain `php.ini` settings are set
+- Используется достаточная версия PHP
+- Файлы `.phar` могут быть выполнены правильно
+- Определенные права на каталог достаточны
+- Некоторые проблемные расширения не загружен
+- Определенные настройки `php.ini` установлены
 
-Since a manual installation performs none of these checks, you have to decide whether the trade-off is worth it for you. As such, below is how to obtain Composer manually:
+Когда, ручная установка, не выполняет ни одну из этих проверок, вы должны решить, стоит ли идти на такой компромисс. Ниже описано, как получить Composer вручную:
 
     curl -s http://getcomposer.org/composer.phar -o $HOME/local/bin/composer
     chmod +x $HOME/local/bin/composer
 
-The path `$HOME/local/bin` (or a directory of your choice) should be in your `$PATH` environment variable. This will result in a `composer` command being available.
+Путь `$HOME/local/bin` (или папка выбранная вами) должна находиться в вашей переменной окружения `$PATH`. Это позволит быть доступной команде `composer`.
 
-When you come across documentation that states to run Composer as `php composer.phar install`, you can substitute that with:
+Если вы прочтете документацию Composer, которая гласит, что нужно запускать Composer так `php composer.phar install`, вы можете заменить эту команду так:
 
     composer install
 
-### How to Define and Install Dependencies
+### Как объявить и установить зависимости
 
-First, create a `composer.json` file in the same directory as `composer.phar`. Here's an example that lists [Twig][2] as a project dependency.
+Во-первых, создайте файл `composer.json` в той-же директории, что и `composer.phar`. Вот пример списка для [Twig][2], в качестве зависимости проекта.
 
 	{
 	    "require": {
@@ -47,20 +48,20 @@ First, create a `composer.json` file in the same directory as `composer.phar`. H
 	    }
 	}
 
-Next, run this command from your project root directory.
+Далее, запустить эту команду из вашей корневой директории проекта.
 
     php composer.phar install
 
-This will download and install the project dependencies into a `vendors/` directory. Next, add this line to your application's primary PHP file; this will tell PHP to use Composer's autoloader for your project dependencies.
+Это позволить загрузить и установить зависимости проекта в папку `vendors/`. Далее, добавьте эту линию в основной PHP файл вашего приложения; это укажет PHP использовать автозагрузчик Composer для зависимостей вашего проекта.
 
 {% highlight php %}
 <?php
 require 'vendor/autoload.php';
 {% endhighlight %}
 
-Now you can use your project dependencies, and they'll be autoloaded on demand.
+Теперь вы можете использовать зависимости вашего проетка и они будут автоматически загружаться по требованию.
 
-* [Learn about Composer][3]
+* [Подробнее о Composer][3]
 
 [1]: http://packagist.org/
 [2]: http://twig.sensiolabs.org
