@@ -5,63 +5,42 @@ isChild: true
 
 ## Фильтрация данных
 
-Never ever (ever) trust foreign input introduced to your PHP code. Always sanitize and validate
-foreign input before using it in code. The `filter_var` and `filter_input` functions can sanitize text and validate text formats (e.g.
-email addresses).
+Никогда не доверяйте пользовательскому вводу, которые передается вашему PHP коду. Всегда проверяйте и очищайте пользователский ввод, перед его использованием в коде. Функции `filter_var` и `filter_input` могут очистить текст, а так-же проверить соответствие ввода некоторым форматам текста(например адрес электронной почты).
 
-Foreign input can be anything: `$_GET` and `$_POST` form input data, some values in the `$_SERVER`
-superglobal, and the HTTP request body via `fopen('php://input', 'r')`. Remember, foreign input is not
-limited to form data submitted by the user. Uploaded and downloaded files, session values, cookie data,
-and data from third-party web services are foreign input, too.
+Пользовательский ввод, может быть любым: `$_GET` и `S_POST` данные введенные в форму, некоторые значения в суперглобальной перменной `$_SERVER` и тело HTTP запроса с помощью `fopen('php://input`, 'r')`. Запомните, что пользовательский ввод не ограничивается данными формы, отправленной пользователем. Отправляемые и загружаемые файлы, значения сессий, данные cookie и данные сторонних веб-сервисов, так-же приравниваюстя к пользовательскому вводу.
 
-While foreign data can be stored, combined, and accessed later, it is still foreign input. Every
-time you process, output, concatenate, or include data in your code, ask yourself if
-the data is filtered properly and can it be trusted.
+Хотя пользовательские данные могут быть без проблем сохранены, скомбинированы и к ним может быть получен доступ позже, но он вс ёще является пользовательским вводом. Каждый раз, что вы обрабатываете, объединяете или подключаете данные в ваш код, спросите себя, отфильтрованы ли эти данные и можно ли им доверять.
 
-Data may be _filtered_ differently based on its purpose. For example, when unfiltered foreign input is passed
-into HTML page output, it can execute HTML and JavaScript on your site! This is known as Cross-Site
-Scripting (XSS) and can be a very dangerous attack. One way to avoid XSS is to sanitize all HTML tags
-in the input by removing tags or escaping them into HTML entities.
+Данные могут быть _отфильтрованые_ по-разному, в зависимости от их назначения. Например, когда нефильтрованный пользовательский ввод передается в HTML код страницы, он может выполнить HTML и JavaScript на вашем сайте! Это известно, как Cross-Site-Scripting (XSS) и может быть очень опасным видом атаки. Один из способов избежать XSS, заключается в валидации ввода от всех HTML тэгов(их удалением, или заменой на HTML символы).
 
-Another example is passing options to be executed on the command line. This can be extremely dangerous
-(and is usually a bad idea), but you can use the built-in `escapeshellarg` function to sanitize the executed
-command's arguments.
+Другой пример, передача данных для выполнения командной строкой. Это может быть крайне опасно(и, как правило - это плохая идея), но вы можете использовать встроенную функцию `escapeshellarg` для валидации аргументов командной строки.
 
-One last example is accepting foreign input to determine a file to load from the filesystem. This can be exploited by
-changing the filename to a file path. You need to remove "/", "../", [null bytes][6], or other characters from the file path so it can't
-load hidden, non-public, or sensitive files.
+Последний пример, принимает пользовательский ввод, чтобы определить, какой файл загружать из файловой системы.  Это может быть использовано, для изменения имени файла, на путь файла. Вам нужно убрать "/", "../", [нулевые байты][6] или другие символы из пути файла, так чтобы он не мог загружать скрытые, не-публичные или конфиденциальные файлы.
 
-* [Learn about data filtering][1]
-* [Learn about `filter_var`][4]
-* [Learn about `filter_input`][5]
-* [Learn about handling null bytes][6]
+* [Подробнее о Фильтрации данных][1]
+* [Подробнее о `filter_var`][4]
+* [Подробнее о `filter_input`][5]
+* [Подробнее об обработке нулевых байтов][6]
 
-### Sanitization
+### Очистка
 
-Sanitization removes (or escapes) illegal or unsafe characters from foreign input.
+Очистка удаляет (или экранирует) неправильные или небезопасные символы из пользовательского ввода.
 
-For example, you should sanitize foreign input before including the input in HTML or inserting it
-into a raw SQL query. When you use bound parameters with [PDO](#databases), it will
-sanitize the input for you.
+Например, вам необходимо нормализовать пользовательский ввод, перед подключением ввода в HTML или его вставкой в сырой запрос SQL. Когда вы используете связанные параметры с [PDO](#Базы_данных), они будут очищать ввод за вас.
 
-Sometimes it is required to allow some safe HTML tags in the input when including it in the HTML
-page. This is very hard to do and many avoid it by using other more restricted formatting like
-Markdown or BBCode, although whitelisting libraries like [HTML Purifier][html-purifier] exists for
-this reason.
+Иногда требуется, разрешить некоторые безопасные HTML тэги в вводе, когда он подключается в HTML страницу. Это очень трудно сделать и избежать других тэгов, но это можно сделать, используя ограниченное форматирование, как например Markdown или BBCode, либо библиотеки с белым списком, как [HTML Purifier][html-purifier] существуют по этой причине.
 
-[See Sanitization Filters][2]
+[Посмотреть очищающие фильтры][2]
 
-### Validation
+### Валидация
+Валидация гарантирует, что пользорвательский ввод, является тем, что вы ожидаете. Например, вы можете валидировать : адрес электронной почты, номер телефона или возраст при обработке запроса регистрации. 
 
-Validation ensures that foreign input is what you expect. For example, you may want to validate an
-email address, a phone number, or age when processing a registration submission.
+[Посмотреть фильтры валидации][3]
 
-[See Validation Filters][3]
-
-[1]: http://www.php.net/manual/en/book.filter.php
-[2]: http://www.php.net/manual/en/filter.filters.sanitize.php
-[3]: http://www.php.net/manual/en/filter.filters.validate.php
-[4]: http://php.net/manual/en/function.filter-var.php
-[5]: http://www.php.net/manual/en/function.filter-input.php
-[6]: http://php.net/manual/en/security.filesystem.nullbytes.php
+[1]: http://www.php.net/manual/ru/book.filter.php
+[2]: http://www.php.net/manual/ru/filter.filters.sanitize.php
+[3]: http://www.php.net/manual/ru/filter.filters.validate.php
+[4]: http://php.net/manual/ru/function.filter-var.php
+[5]: http://www.php.net/manual/ru/function.filter-input.php
+[6]: http://php.net/manual/ru/security.filesystem.nullbytes.php
 [html-purifier]: http://htmlpurifier.org/
