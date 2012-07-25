@@ -30,8 +30,8 @@ _PHP: Правильный путь_ имеет банерные изображ�
 
 ## Где
 
-[Английский](http://www.phptherightway.com)
-[Русский](http://ru.phptherightway.com)
+* [Английский](http://www.phptherightway.com)
+* [Русский](http://ru.phptherightway.com)
 
 ### Переводы
 
