@@ -9,7 +9,6 @@ isChild: true
 
 ### Разработка
 
-To show errors in your <strong>development</strong> environment, configure the following settings in your `php.ini`:
 Для показа ошибок в вашей среде <strong>разработки</strong>, сконфигурируйте следующие настройки в вашем `php.ini`:
 
 - display_errors: On
