@@ -1,5 +1,4 @@
 ---
-title: Пространства имен
 isChild: true
 ---
 
@@ -16,5 +15,5 @@ _Пространства имен_ решают эту проблему. Как
 * [Подробнее о пространствах имен][namespaces]
 * [Подробнее о PSR-0][psr0]
 
-[namespaces]: http://php.net/manual/ru/language.namespaces.php
-[psr0]: https://github.com/getjump/fig-standards/blob/master/accepted/PSR-0.md
+[namespaces]: http://php.net/manual/en/language.namespaces.php
+[psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md

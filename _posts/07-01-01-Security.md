@@ -1,4 +1,1 @@
----
-title: Безопасность
----
-# Безопасность
+# Security {#security_title}

@@ -1,14 +1,17 @@
 ---
-title: Использование глобальных переменных(Register_Globals)
 isChild: true
 ---
 
-## Использование глобальных переменных(Register_Globals)
+## Register Globals {#register_globals_title}
 
-<strong>Примечание:</strong> С введением PHP 5.4, настройка `register_globals` была удалена и больше не может быть использована. 
+**NOTE:** As of PHP 5.4.0 the `register_globals` setting has been removed and can no 
+longer be used. This is only included as a warning for anyone in the process of upgrading a legacy application.
 
-При включении параметра конфигурации `register_globals`, что делает несколько типов переменных(в том числе из `$_POST`, `$_GET` и `$_REQUEST`) глобальными, доступными в глобальной области видимости вашего приложение. Это может легко привести к проблемам с безопасностью, так-как ваше приложение не сможет эффективно определить откуда пришли данные.
+When enabled, the `register_globals` configuration setting that makes several types of variables (including ones from 
+`$_POST`, `$_GET` and `$_REQUEST`) available in the global scope of your application. This can easily lead to 
+security issues as your application cannot effectively tell where the data is coming from.
 
-Если вы используете версию PHP, ниже 4.2.0, учтите, что вы по-прежнему подвергаетесь риску возникновения проблем из-за этого параметра. По состоянию на PHP 4.2.0, настройка `register_globals` по умолчанию выключена. Для обеспечения безопасности вашего приложения, убедитесь, что эта настройка <strong>всегда</strong> отключена, если возможно.
+For example: `$_GET['foo']` would be available via `$foo`, which can override variables that have not been declared. 
+If you are using PHP < 5.4.0 __make sure__ that `register_globals` is __off__.
 
-* [Использование глобальных переменных в руководстве PHP](http://www.php.net/manual/ru/security.globals.php)
+* [Register_globals in the PHP manual](http://www.php.net/manual/en/security.globals.php)

@@ -2,7 +2,7 @@
 isChild: true
 ---
 
-## Object Caching
+## Object Caching {#object_caching_title}
 
 There are times when it can be beneficial to cache individual objects in your code, such as with data that is expensive
 to get or database calls where the result is unlikely to change. You can use object caching software to hold these
@@ -19,6 +19,10 @@ one real limitation of APC is that it is tied to the server it's installed on. M
 as a separate service and can be accessed across the network, meaning that you can store objects in a hyper-fast data
 store in a central location and many different systems can pull from it.
 
+Note that when running PHP as a (Fast-)CGI application inside your webserver, every PHP process will have its own
+cache, i.e. APC data is not shared between your worker processes. In these cases, you might want to consider using
+memcached instead, as it's not tied to the PHP processes.
+
 In a networked configuration APC will usually outperform memcached in terms of access speed, but memcached will be able
 to scale up faster and further. If you do not expect to have multiple servers running your application, or do not need
 the extra features that memcached offers then APC is probably your best choice for object caching.
@@ -29,11 +33,9 @@ Example logic using APC:
 <?php
 // check if there is data saved as 'expensive_data' in cache
 $data = apc_fetch('expensive_data');
-if (!$data)
-{
-    // data not in cache, do expensive call and save for later use
-    $data = get_expensive_data();
-    apc_store('expensive_data', $data);
+if ($data === false) {
+    // data is not in cache; save result of expensive call for later use
+    apc_add('expensive_data', $data = get_expensive_data());
 }
 
 print_r($data);

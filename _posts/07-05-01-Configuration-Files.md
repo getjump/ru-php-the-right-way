@@ -1,12 +1,15 @@
 ---
-title: Файлы конфигурации
 isChild: true
 ---
 
-## Файлы конфигурации
+## Configuration Files {#configuration_files_title}
 
-Когда вы создаете файлы конфигурации для ваших приложений, рекомендуется использование одного из следующих способов:
+When creating configuration files for your applications, best practices recommend that one of the following methods 
+be followed:
 
-- Рекомендуется хранить вашу конфигурационную информацию, там, где к ней не может быть получен доступ напрямую, так и через файловую систему.
-- Если вы вынеуждены хранить конфигурационные файлы в корневом каталоге, именуйте файл с расширением `.php`. Это гарантирует, что, если к скрипту обратятся напрямую, он не будет выведен, как обычный текст.
-- Информация в файлах конфигурации, должна быть защищена соотвественно, либо с помощью шифрования или системных прав группы/пользователя файла.
+- It is recommended that you store your configuration information where it cannot be accessed directly and pulled in 
+via the file system.
+- If you must store your configuration files in the document root, name the files with a `.php` extension. This 
+ensures that, even if the script is accessed directly, it will not be outputed as plain text.
+- Information in configuration files should be protected accordingly, either through encryption or group/user file 
+system permissions

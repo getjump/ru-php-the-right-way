@@ -1,67 +1,70 @@
-# PHP: Правильный путь
-### Перевод руководства http://phptherightway.com
-## Обзор
+# PHP: The Right Way
 
-Это репозиторий GitHub Pages проекта _PHP: Правильный путь_.
+## Overview
 
-* Этот вебсайт работает с помощью Jekyll.
-* Каждая секция и подсекция, это Markdown файл в директории `_posts/`. 
-* Подсекции имеют тэг `isChild: true` в их шапке.
-* Навигация и структура страниц генерируются автоматически.
+This is the GitHub Pages repository for the _PHP: The Right Way_ project.
 
-## Расскажите всем!
+* This website is a Jekyll project.
+* Each section and sub-section are a Markdown file in `_posts/`.
+* Sub-sections have `isChild: true` in their front matter.
+* The navigation and page structure are automatically generated.
 
-_PHP: Правильный путь_ имеет банерные изображения, которые вы можете использовать на вашем сайте. Окажите поддержку и дайте новым PHP разработчикам узнать, где найти хорошую информацию!
+## Spread the Word!
 
-[Посмотреть банеры](http://www.phptherightway.com/banners.html)
+_PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP
+developers know where to find good information!
 
-## Как помочь?
+[See Banner Images](http://www.phptherightway.com/banners.html)
 
-1. Сделайте форк, отредактируйте.
-2. Можете установить [Ruby](https://rvm.io/rvm/install/) вместе с гемом [Jekyll](https://github.com/mojombo/jekyll/) для локального предпосмотра.
-3. Отправьте pull request для потверждения.
+## How to Contribute
 
-###  Руководство по помощи
+1. Fork and edit
+2. Optionally install [Ruby](https://rvm.io/rvm/install/) with [Jekyll](https://github.com/mojombo/jekyll/) gem to preview locally
+3. Submit pull request for consideration
 
-1. Используйте американский английский(для основного репозитория), и русский для дополнительного(переведенного).
-2. Используйте четыре пробела для выделения текста; не используйте табы.
-3. Сверните весь текст в 120 символов.
-4. Примеры кода, добавляемые в руководство должны придерживаться PSR-1 или выше.
+### Contributor Style Guide
 
-## Где
+1. Use American English spelling (*primary English repo only*)
+2. Use four (4) spaces to indent text; do not use tabs.
+3. Wrap all text to 120 characters.
+4. Code samples should adhere to PSR-1 or higher.
 
-* [Английский](http://www.phptherightway.com)
-* [Русский](http://ru.phptherightway.com)
+## Where
 
-### Переводы
+<http://www.phptherightway.com>
 
-Если вы заинтересованы в переводе _PHP: Правильный Путь_, сделайте форк основного репозитория на GitHub и опубликуйте переведенный форк на вашем собственном аккаунте GitHub Pages. Мы будем ссылаться на ваш перевод из основного документа.
+* [English](http://www.phptherightway.com)
+* [Chinese](http://wulijun.github.com/php-the-right-way)
+* [Ukrainian](http://iflista.github.com/php-the-right-way)
+* [Portuguese](http://br.phptherightway.com/)
+* [Bulgarian](http://bg.phptherightway.com/)
 
-Чтобы избежать фрагментации и путаницы читетале, пожалуйста выберите один из следующих вариантов:
+### Translations
 
-1. Мы будем сылаться на ваш форк GitHub Pages `[имя_пользователя].github.com/php-the-right-way`.
-2. Мы будем сылаться на ваш форк GitHub Pages с субдоменом(например "ru.phptherightway.com")
+If you are interested in translating _PHP: The Right Way_, fork this repo on GitHub and publish your localized fork to your own GitHub Pages account. We'll link to your translation from the primary document.
 
-Если вы используете субдомен, введите его в файле `CNAME`, и попросите нас установить DNS. Если вы не используете субдомен, удалите файл `CNAME`, иначе ваш форк не будет собран, когда вы сделаете push.
+To avoid fragmentation and reader confusion, please choose one of these options:
 
-Когда ваш перевод будет готов, откройте инцидент(issue) в Issue Tracker(Трэкере Инцидентов), чтобы дать нам знать.
+1. We link to your GitHub Pages fork with `[username].github.com/php-the-right-way`
+2. We link to your GitHub Pages fork with a subdomain (e.g. "ru.phptherightway.com")
 
-## Почему
+If you use a subdomain, enter the subdomain into the `CNAME` file, and ask us to setup DNS for you. If you do not use a subdomain, remove the `CNAME` file entirely else your fork will not build when pushed.
 
-В последнее время было очень много дискусий о том, как сообществу PHP не хватает достоверной информации для новых PHP программистов. Этот репозиторий призван решить эту проблему.
+When your translation is ready, open an issue on the Issue Tracker to let us know.
 
-## Кто
+## Why
 
-Имя разработчика [Josh Lockhart](http://twitter.com/codeguy). Он является автором [Slim Framework](http://www.slimframework.com/), и работает на [New Media Campaigns](http://www.newmediacampaigns.com/).
+There's been a lot of discussion lately about how the PHP community lacks sufficient, credible information for programmers new to PHP. This repository aims to solve this problem.
 
-### Соавторы
+## Who
+
+My name is [Josh Lockhart](http://twitter.com/codeguy). I'm the author of the [Slim Framework](http://www.slimframework.com/), and I work for [New Media Campaigns](http://www.newmediacampaigns.com/).
+
+### Collaborators
 
 * [Kris Jordan](http://krisjordan.com/)
 * [Phil Sturgeon](http://philsturgeon.co.uk/)
 
-### Перевод
-* [Pavel Savinov](http://twitter.com/getjump) - инициатор русского перевода.
-
-## Лицензия
+## License
 
 [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/)

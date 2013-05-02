@@ -1,4 +1,1 @@
----
-title: Практики написания кода
----
-# Практики написания кода
+# Coding Practices {#coding_practices_title}

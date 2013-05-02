@@ -3,7 +3,7 @@
     var $contributors = $('#contributors');
     if ( $contributors.length ) {
         var fail = function () {
-            $contributors.html('<p>Этот проект был бы невозможен без помощи <a href="https://github.com/codeguy/php-the-right-way/graphs/contributors">этих потрясающих людей</a> на GitHub.</p>');
+            $contributors.html('<p>This project would not be possible without the help of <a href="https://github.com/codeguy/php-the-right-way/graphs/contributors">our amazing contributors</a> on GitHub.</p>');
         };
         $.ajax({
             cache: false,
@@ -55,6 +55,7 @@
             var eTop = $(e).offset().top;
             var eBottom = eTop + $(e).height();
             var id=e.id;
+            id = id.replace("_title", "");
 
             if (eTop >= viewTop) {
                 //if we are passed the view and no heading was highlighted yet, store previous one as fallback

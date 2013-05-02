@@ -1,12 +1,12 @@
 ---
 layout: default
 title: Website Banners
-description: "Расскажите всем! Используйте баннеры, чтобы рассказать новым разработчикам о PHP: Правильный Путь"
+description: "Spread the word! Use these banner to let new PHP programmers know about PHP: The Right Way"
 ---
 
-# Веб-баннеры
+# Web Banners
 
-Расскажите о _PHP: Правильный путь_ с банерными изображениями! Покажите новым PHP разработчикам, где найти хорошую информацию.
+Spread the word with _PHP: The Right Way_ banner images! Show new PHP developers where to find good information.
 
 ## Button 1 (120x90)
 

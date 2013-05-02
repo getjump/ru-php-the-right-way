@@ -1,44 +1,58 @@
 ---
-title: Разработка через тестирование
 isChild: true
 ---
 
-## Разработка через тестирование
+## Test Driven Development {#test_driven_development_title}
 
-Из [Википедии](http://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0_%D1%87%D0%B5%D1%80%D0%B5%D0%B7_%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5):
+From [Wikipedia](http://en.wikipedia.org/wiki/Test-driven_development):
 
-> Разработка через тестирование (TDD) представляет собой процесс разработки програмного обеспечения, которые опирается на повторении очень короткого цикла разработки: сперва, разработчик пишет автоматизированные тесты, которые определяют желаемое улучшение или новую функцию, далее производит код, который успешной пройдет этот тест и наконец производит рефактор кода для соответствия со стандартами. Kent Beck, человек которому приписывают статус разработчика или "переоткрывателя" техники, TDD предлагает простую конструкцию, а так-же вселяет уверенность.
+> Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes a failing automated test case that defines a desired improvement or new function, then produces code to pass that test and finally refactors the new code to acceptable standards. Kent Beck, who is credited with having developed or 'rediscovered' the technique, stated in 2003 that TDD encourages simple designs and inspires confidence
 
-Существует несколько различных типов тестирования, которые вы можете сделать для вашего приложения
+There are several different types of testing that you can do for your application
 
-### Модульное тестирование (Unit Testing)
+### Unit Testing
 
-Модульное тестирование - это подход к программированию, который позволяет удостовериться, что функции, классы и методы работают, как ожидается с момента начала и до конца разработки. Проверяя значения, которые приходят и выходят из различных функций и методом, вы можете быть уверены, что внутренняя логика работает правильно. Используя Внедрение Зависимостей и внедрение классов "макетов" и заглушек, вы можете убедиться, что зависимости используются правильно для большего покрытия тестами.
+Unit Testing is a programming approach to ensure functions, classes and methods are working as
+expected, from the point you build them all the way through the development cycle. By checking
+values going in and out of various functions and methods, you can make sure the internal logic is
+working correctly. By using Dependency Injection and building "mock" classes and stubs you can verify that dependencies are correctly used for even better test coverage.
 
-Когда вы создаете класс или функцию, вы должны создать модульный тест для каждого возможного поведения. На базовом уровне, вы должны убедиться, что ваш код выдает ошибку, если вы отсылаете неправильные аргументы и работает, если вы отсылаете правильные аргументы, соответсвенно. Это поможет убедиться в том, что изменения, которые вы сделаете относительно этого класса или функции позднее не помешают старым работать как ожидалось. Единственная альтернатива этому var_dump() в test.php, который не является способом создания приложений - больших или маленьких.
+When you create a class or function you should create a unit test for each behavior it must have. At a very basic level you should
+make sure it errors if you send it bad arguments and make sure it works if you send it valid arguments.
+This will help ensure that when you make changes to this class or function later on in the development
+cycle that the old functionality continues to work as expected. The only alternative to this would be
+var_dump() in a test.php, which is no way to build an application - large or small.
 
-Еще одно использование модульных тестов - вклад в open source. Если вы можете писать тесты, которые показывают сломанную функциональность, тогда почините её, и покажите, что тест пройден, патчи имеют больше шансов быть принятыми. Если вы запускаете проект, который допускает Pull Request, тогда вы должны указать это в качестве требования.
+The other use for unit tests is contributing to open source. If you can write a test that shows broken
+functionality (i.e. fails), then fix it, and show the test passing, patches are much more likely to be accepted. If
+you run a project which accepts pull requests then you should suggest this as a requirement.
 
-[PHPUnit](http://phpunit.de) является фрэймворком тестирования стандарта де-факто для написания модульных тестов в PHP приложениях, но так-же существует несколько альтернатив.
+[PHPUnit](http://phpunit.de) is the de-facto testing framework for writing unit tests for PHP
+applications, but there are several alternatives
 
 * [SimpleTest](http://simpletest.org)
 * [Enhance PHP](http://www.enhance-php.com/)
 * [PUnit](http://punit.smf.me.uk/)
+* [atoum](https://github.com/atoum/atoum)
 
-### Интеграционное тестирование
+### Integration Testing
 
-Из [Википедии](http://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%BE%D0%B5_%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5):
+From [Wikipedia](http://en.wikipedia.org/wiki/Integration_testing):
 
-> Интеграционное тестирование (иногда называется Интеграция и Тестирование, с аббревиатурой "I&T") это фаза в тестирование програмнного обеспечения, в котором отдельные модули, комбинируются и тестируются, как группа. Это происходит после модульного тестирования и перед валидационным тестированием. Integration testing takes as its input modules that have been unit tested, groups them in larger aggregates, applies tests defined in an integration test plan to those aggregates, and delivers as its output the integrated system ready for system testing.
+> Integration testing (sometimes called Integration and Testing, abbreviated "I&T") is the phase in software testing in which individual software modules are combined and tested as a group. It occurs after unit testing and before validation testing. Integration testing takes as its input modules that have been unit tested, groups them in larger aggregates, applies tests defined in an integration test plan to those aggregates, and delivers as its output the integrated system ready for system testing.
 
-Многие инструменты, которые могуть быть использованы для модульного тестирования, так-же могут быть использованы для интеграционного тестирования.
+Many of the same tools that can be used for unit testing can be used for integration testing as many
+of the same principles are used.
 
-### Функциональное тестирование
+### Functional Testing
 
-Так-же известны, как подтверждающее тестирование, функциональное тестирование состоит из использования инструментов для создания автоматизированных тестов, которые по-настоящему используют ваше приложение, а не просто проверяют, что отдельные куски(модули) кода ведут себя и могут взаимодействовать правильно. Эти инструменты обычно работают, используя реальные данные и симулируя реальных пользователей приложения.
+Sometimes also known as acceptance testing, functional testing consists of using tools to create automated
+tests that actually use your application instead of just verifying that individual units of code are behaving
+correctly and that individual units can speak to each other correctly. These tools typically work using real
+data and simulating actual users of the application.
 
-#### Инструменты для функционального тестирования
+#### Functional Testing Tools
 
 * [Selenium](http://seleniumhq.com)
 * [Mink](http://mink.behat.org)
-* [Codeception](http://codeception.com) это фрэймворк для тестирования(всё-в-одном), включающий инструменты потверждающего тестирования
+* [Codeception](http://codeception.com) is a full-stack testing framework that includes acceptance testing tools
