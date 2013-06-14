@@ -36,4 +36,4 @@ _В интернете не существует описания канонич
 [Посмотреть баннеры][2]
 
 [1]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
-[2]: /banners.html
+[2]: /ru-php-the-right-way/banners.html
