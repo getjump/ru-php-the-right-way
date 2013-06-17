@@ -39,6 +39,8 @@ PHP использует буффер памяти, чтобы сохранит�
 
 {% highlight php %}
 
+<?php
+
 class dog {
   public $name = '';
 
@@ -57,6 +59,8 @@ class dog {
 
 {% highlight php %}
 
+<?php
+
 $rover = new dog();
 $rover->setName('rover');
 echo $rover->getName();
@@ -66,6 +70,8 @@ echo $rover->getName();
 Установка и вызов свойства `name` напрямую может позволить скрипту работать до 100% быстрее, так-же, как и сократить время разработки.
 
 {% highlight php %}
+
+<?php
 
 $rover = new dog();
 $rover->name = 'rover';
@@ -79,6 +85,8 @@ echo $rover->name;
 
 {% highlight php %}
 
+<?php
+
 $description = strip_tags($_POST['description']);
 echo $description;
 
@@ -87,6 +95,8 @@ echo $description;
 Нет причины копировать переменную в примере выше. Вы можете просто сделать эту операцию одной линией и избежать сверх-потребление памяти:
 
 {% highlight php %}
+
+<?php
 
 echo strip_tags($_POST['description']);
 
@@ -97,6 +107,8 @@ echo strip_tags($_POST['description']);
 Частая ошибка - размещение SQL запросов в цикле. Это приводит к нескольким циклам запросов к базе данных, и существенно замедляет скрипты. В примере ниже, вы можете изменить цикл, чтобы он строил одиночный SQL запрос и вставлял всех пользователей за один раз.
 
 {% highlight php %}
+
+<?php
 
 foreach ($userList as $user) {
   $query = 'INSERT INTO users (first_name,last_name) VALUES("' . $user['first_name'] . '", "' . $user['last_name'] . '")';
@@ -117,6 +129,8 @@ INSERT INTO users (first_name,last_name) VALUES("John", "Doe")
 
 {% highlight php %}
 
+<?php
+
 $userData = array();
 foreach ($userList as $user) {
     $userData[] = '("' . $user['first_name'] . '", "' . $user['last_name'] . '")';
@@ -128,7 +142,11 @@ mysql_query($query);
 
 Выполняет запрос:
 
+{% highlight sql %}
+
 INSERT INTO users (first_name,last_name) VALUES("John", "Doe"),("Jane", "Doe")...
+
+{% endhighlight %}
 
 [Синтаксис MySQL INSERT](http://dev.mysql.com/doc/mysql/ru/insert.html)
 
