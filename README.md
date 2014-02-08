@@ -3,10 +3,10 @@
 ## Обзор
 
 Это репозиторий GitHub Pages проекта _PHP: Правильный путь_.
-PDF, Mobi, Epub вариант можно найти тут - https://leanpub.com/ruphptherightway/.
+PDF, Mobi, Epub вариант можно найти тут &mdash; https://leanpub.com/ruphptherightway/.
 
 * Этот вебсайт работает с помощью Jekyll.
-* Каждая секция и подсекция — это Markdown файл в директории `_posts/`. 
+* Каждая секция и подсекция &mdash; это Markdown файл в директории `_posts/`. 
 * Подсекции имеют тэг `isChild: true` в их шапке.
 * Навигация и структура страниц генерируются автоматически.
 
