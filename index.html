@@ -1,12 +1,12 @@
 ---
 layout: default
-description: "An easy-to-read, quick reference for PHP best practices, accepted coding standards, and links to authoritative PHP tutorials around the Web"
+description: "Легкочитаемое, быстрое руководство по PHP, содержащее сылки на авторитетные руководства в интернете"
 ---
 
 {% capture welcome_content %}{% include welcome.md %}{% endcapture %}
 {{ welcome_content|markdownify }}
 
-{% capture backtotop %}[Наверх](#top){.top}{% endcapture %}
+{% capture backtotop %}[Наверх](#top){:.top}{% endcapture %}
 {% for post in site.posts reversed %}
     {% if post.isChild != true and loop.first != true %}
     {{ backtotop|markdownify }}
