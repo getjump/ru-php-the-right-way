@@ -1,12 +1,6 @@
-auto: true
-safe: true
-server: true
-server_port: 4000
 baseurl: /
-url: http://localhost:4000
-
-pygments: true
-markdown: maruku
+highlighter: pygments
+markdown: kramdown
 permalink: date
 maruku:
     use_tex:    false
@@ -14,3 +8,17 @@ maruku:
     png_engine: blahtex
     png_dir:    images/latex
     png_url:    /images/latex
+
+gems:
+    - jekyll-sitemap
+
+defaults:
+    -
+      scope:
+          path: ""
+      values:
+          sitemap: false
+
+exclude: ['CNAME', 'CONTRIBUTING.md', 'LICENSE', 'README.md', 'pages/example.md']
+
+baseurl: "/ru-php-the-right-way"
