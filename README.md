@@ -6,7 +6,7 @@
 PDF, Mobi, Epub вариант можно найти тут &mdash; https://leanpub.com/ruphptherightway/.
 
 * Этот вебсайт работает с помощью Jekyll.
-* Каждая секция и подсекция &mdash; это Markdown файл в директории `_posts/`. 
+* Каждая секция и подсекция &mdash; это Markdown файл в директории `_posts/`.
 * Подсекции имеют тэг `isChild: true` в их шапке.
 * Навигация и структура страниц генерируются автоматически.
 
@@ -34,19 +34,27 @@ PDF, Mobi, Epub вариант можно найти тут &mdash; https://lean
 <http://www.phptherightway.com>
 
 * [English](http://www.phptherightway.com)
-* [Catalan] (http://ca.phptherightway.com)
-* [Chinese](http://wulijun.github.com/php-the-right-way)
-* [Japanese] (http://ja.phptherightway.com)
-* [Korean] (http://wafe.github.io/php-the-right-way)
-* [Italian] (http://it.phptherightway.com)
-* [Polish](http://pl.phptherightway.com)
-* [Portuguese](http://br.phptherightway.com)
-* [Russian] (http://getjump.github.io/ru-php-the-right-way)
-* [Spanish] (http://es.phptherightway.com)
-* [Ukrainian](http://iflista.github.com/php-the-right-way)
-* [Bulgarian](http://bg.phptherightway.com)
-* [German] (http://rwetzlmayr.github.io/php-the-right-way)
-* [Turkish](http://hkulekci.github.io/php-the-right-way/)
+* [Deutsch](http://rwetzlmayr.github.io/php-the-right-way)
+* [Español](http://phpdevenezuela.github.io/php-the-right-way)
+* [Français](http://eilgin.github.io/php-the-right-way/)
+* [Indonesia](http://id.phptherightway.com)
+* [Italiano](http://it.phptherightway.com)
+* [Polski](http://pl.phptherightway.com)
+* [Português do Brasil](http://br.phptherightway.com)
+* [Română](https://bgui.github.io/php-the-right-way/)
+* [Slovenščina](http://sl.phptherightway.com)
+* [Srpski](http://phpsrbija.github.io/php-the-right-way/)
+* [Türkçe](http://hkulekci.github.io/php-the-right-way/)
+* [български](http://bg.phptherightway.com)
+* [Русский язык](http://getjump.github.io/ru-php-the-right-way)
+* [Українська](http://iflista.github.com/php-the-right-way)
+* [العربية](https://adaroobi.github.io/php-the-right-way/)
+* [فارسى](http://novid.github.io/php-the-right-way/)
+* [ภาษาไทย](https://apzentral.github.io/php-the-right-way/)
+* [한국어판](http://modernpug.github.io/php-the-right-way)
+* [日本語](http://ja.phptherightway.com)
+* [简体中文](http://laravel-china.github.io/php-the-right-way/)
+* [繁體中文](http://laravel-taiwan.github.io/php-the-right-way)
 
 ### Перевод
 
